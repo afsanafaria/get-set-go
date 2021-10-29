@@ -1,0 +1,10 @@
+.service-link{
+    text-decoration: none!important;
+    color: white!important;
+}
+.service-btn , .service-link{
+    border:2px solid darkviolet!important;
+    background-color: darkviolet!important;
+    /* color:white!important; */
+}
+

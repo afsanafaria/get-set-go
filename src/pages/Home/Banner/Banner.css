@@ -1,0 +1,14 @@
+.banner{
+    height: 100vh;
+}
+.home-heading{
+    font-size:6rem;
+    color: darkslateblue;
+}
+.online-delivery {
+    color: darkslateblue;
+}
+.heading{
+    color: darkslateblue;
+    font-size: 3rem;
+}
