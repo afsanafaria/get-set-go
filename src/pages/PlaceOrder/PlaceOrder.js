@@ -47,7 +47,7 @@ const PlaceOrder = () => {
 
                     <Col xs={1} md={4}>
                         <Card>
-                            <Image variant="top" src={user.photoURL} className="w-100" height="200" />
+                            {/* <Image variant="top" src={user.photoURL} className="w-100" height="200" /> */}
                             <Card.Body>
                                 <Card.Title>Welcome {user.displayName} <br /> Your email is: {user.email}</Card.Title>
                                 <Card.Text>

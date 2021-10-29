@@ -18,7 +18,7 @@ const Login = () => {
             .then((result) => {
                 console.log(result.user)
                 // setUser(result.user)
-                // axios.post('http://localhost:5000/users', result.user)
+                // axios.post('https://arcane-earth-97331.herokuapp.com/users', result.user)
                 //     .then(res => {
                 //         if (res.data.insertedId) {
                 //             alert("Posted Successfully");
