@@ -7,24 +7,34 @@ const Footer = () => {
         <div className="footer">
             <Container>
                 <Row className="w-100 mt-5 pt-5">
-                    <Col xs={1} md={4}>
-                        <h4>Get Set Go</h4>
-                        <li>About Us</li>
-                        <li>Careers</li>
-                        <li>FAQ</li>
+                    <Col md={4}>
+                        <h4 className="mx-3">Get Set Go</h4>
+                        <ul>
+
+                            <li>About Us</li>
+                            <li>Careers</li>
+                            <li>FAQ</li>
+                        </ul>
+
                     </Col>
-                    <Col xs={1} md={4}>
-                        <h4>Services</h4>
-                        <li>Food Delivery Service</li>
-                        <li>Documents Delivery Service</li>
-                        <li>Clothes Delivery Service</li>
-                        <li>Shoes Delivery Service</li>
+                    <Col md={4}>
+                        <h4 className="mx-3">Services</h4>
+                        <ul>
+
+                            <li>Food Delivery Service</li>
+                            <li>Documents Delivery Service</li>
+                            <li>Clothes Delivery Service</li>
+                            <li>Shoes Delivery Service</li>
+                        </ul>
                     </Col>
-                    <Col xs={1} md={4}>
-                        <h4>Get in touch</h4>
-                        <li><i class="fab fa-facebook"></i></li>
-                        <li><i class="fab fa-google-plus-g"></i></li>
-                        <li><i class="fab fa-linkedin"></i></li>
+                    <Col md={4}>
+                        <h4 className="mx-3">Get in touch</h4>
+                        <ul>
+
+                            <li><i class="fab fa-facebook"></i></li>
+                            <li><i class="fab fa-google-plus-g"></i></li>
+                            <li><i class="fab fa-linkedin"></i></li>
+                        </ul>
                     </Col>
                 </Row>
             </Container>

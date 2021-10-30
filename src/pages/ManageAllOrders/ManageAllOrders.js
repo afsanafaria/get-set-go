@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 // import { useForm } from "react-hook-form";
 
@@ -18,12 +18,14 @@ const ManageAllOrders = () => {
             .then(res => res.json())
             .then(data => setManageUsers(data))
     }, [])
-
+    if (manageUsers.length <= 0) {
+        return <div className="loader"><Spinner className="" animation="border" /></div>
+    }
     const updateOrderStatus = id => {
         fetch(`https://arcane-earth-97331.herokuapp.com/users/${id}`)
             .then(res => res.json())
             .then(data => setSingleUser(data))
-        // const updatedFruitColor = e.target.value;
+
         const updatedSingleUser = {
             name: singleUser.name,
             email: singleUser.email,
@@ -56,7 +58,7 @@ const ManageAllOrders = () => {
 
     return (
         <div className="manage-orders">
-            <h2 className="text-center my-5">Hi, Admin!! You can manage All Orders</h2>
+            <h3 className="heading text-center my-5">Hi, Admin!! You can manage all orders</h3>
             <Container>
                 <Row md={4} className="w-100 g-4">
                     {
@@ -73,7 +75,7 @@ const ManageAllOrders = () => {
                                             <option>Approved</option>
                                         </select>
                                         <br />
-                                        <Button onClick={() => updateOrderStatus(manageUser._id)} className="mt-2">Update</Button>
+                                        <Button onClick={() => updateOrderStatus(manageUser._id)} className="mt-2 service-btn">Update</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>

@@ -18,16 +18,16 @@ const AddNewService = () => {
         <div className="mt-5">
             <Container>
                 <Row className="w-100">
-                    <Col xs={1} md={6} className="mt-lg-5 pt-lg-5">
+                    <Col md={6} className="mt-lg-5 pt-lg-5">
                         <h2 className="mt-lg-2 heading">Add A New Service</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <input type="text" {...register("title")} className="form-control mb-4" placeholder="Enter title" />
-                            <textarea  {...register("description")} className="form-control mb-4" placeholder="Enter Description" />
+                            <input type="text" {...register("title", { required: true })} className="form-control mb-4" placeholder="Enter title" />
+                            <textarea  {...register("description", { required: true, minLength: 130 })} className="form-control mb-4" placeholder="Enter Description" />
                             <input type="text" {...register("img")} className="form-control mb-4" placeholder="Enter Image URL" />
                             <input className="btn btn-primary " type="submit" />
                         </form>
                     </Col>
-                    <Col xs={1} md={6}>
+                    <Col md={6}>
                         <img className="w-100"
                             alt=""
                             src="https://i.pinimg.com/736x/0c/19/21/0c19219ab92ebc202c5b0e5a3968607e.jpg"
