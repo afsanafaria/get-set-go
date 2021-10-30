@@ -21,9 +21,9 @@ const Header = () => {
                                 user.email &&
                                 <>
                                     <Link className="nav-link ms-1 fw-bold" to="/myOrders" >My Orders</Link>
-                                    <Link className="nav-link ms-1 fw-bold" to="manageAllOrders" >Manage All Orders</Link>
+                                    <Link className="nav-link ms-1 fw-bold" to="/manageAllOrders" >Manage All Orders</Link>
                                     <Link className="nav-link ms-1 fw-bold" to="/addNewService" >Add a New Service</Link>
-                                    <Button className="nav-link ms-1 fw-bold" onClick={googleSignOut} >Log Out</Button>
+                                    <Button className="nav-link log-out ms-1 fw-bold" onClick={googleSignOut} >Log Out</Button>
 
 
                                 </>
