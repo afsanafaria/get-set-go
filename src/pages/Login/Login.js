@@ -16,7 +16,7 @@ const Login = () => {
         setIsLoading(true);
         googleSignIn()
             .then((result) => {
-                console.log(result.user)
+                // console.log(result.user)
                 // setUser(result.user)
                 // axios.post('https://arcane-earth-97331.herokuapp.com/users', result.user)
                 //     .then(res => {

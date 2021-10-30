@@ -7,19 +7,6 @@ import useAuth from '../../hooks/useAuth';
 import './PlaceOrder.css'
 
 const PlaceOrder = () => {
-    const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {
-        console.log(data)
-        axios.post('https://arcane-earth-97331.herokuapp.com/users', data)
-            .then(res => {
-                if (res.data.insertedId) {
-                    window.confirm("Please Check your data again");
-                    reset();
-
-                }
-            })
-
-    };
     const { serviceId } = useParams();
     const { user } = useAuth();
 
@@ -29,6 +16,24 @@ const PlaceOrder = () => {
             .then(res => res.json())
             .then(data => setSelectedService(data))
     }, [])
+
+    const { register, handleSubmit, reset } = useForm({
+        defaultValues: { title: selectedService.title },
+    });
+    const onSubmit = data => {
+        console.log(data)
+        axios.post('https://arcane-earth-97331.herokuapp.com/users', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    window.confirm("Please Check your data again");
+                    reset(data);
+
+                }
+            })
+
+    };
+
+
     return (
         <div className="my-4">
             <Container>
@@ -65,7 +70,7 @@ const PlaceOrder = () => {
                                         <label>Order Status</label>
                                         <input  {...register("satus")} value="Pending" className="w-100 form-control mb-2" placeholder="Enter your desired Service" />
                                         <input className="w-100 btn btn-primary mb-2" type="submit" value="PlaceOrder" />
-                                        {/* value={selectedService.title}  */}
+                                        {/*  */}
                                     </form>
                                 </Card.Text>
                             </Card.Body>
