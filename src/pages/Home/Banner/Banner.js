@@ -5,12 +5,12 @@ import './Banner.css'
 const Banner = () => {
     return (
         <div className="banner ">
-            <Container fluid>
+            <Container >
                 <Row className="w-100">
                     <Col xs={12} md={4}
-                        className="px-md-3 d-flex align-items-center justify-content-center"
+                        className="d-flex align-items-center justify-content-center"
                     >
-                        <div className="mx-md-2 ps-md-5 ps-lg-5 ">
+                        <div className=" ">
                             {/* <h1 className="heading">Get Set Go</h1> */}
                             <h1 className="home-heading text-md-wrap fw-bold">An Online delivery service</h1>
                             <p className="fs-5">We focus on our fastest delivery and quality of our service</p>
