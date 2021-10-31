@@ -4,7 +4,7 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className="banner">
+        <div className="banner ">
             <Container fluid>
                 <Row className="w-100">
                     <Col xs={12} md={4}

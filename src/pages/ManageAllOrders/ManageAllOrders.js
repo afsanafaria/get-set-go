@@ -56,6 +56,24 @@ const ManageAllOrders = () => {
 
     }
 
+    const deleteOrder = id => {
+        const proceed = window.confirm('Are you sure,You want to delete?');
+        console.log(id)
+        if (proceed) {
+            fetch(`https://arcane-earth-97331.herokuapp.com/users/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('Deleted successfully');
+                        const remainingUsers = manageUsers.filter(user => user._id !== id);
+                        setManageUsers(remainingUsers);
+                    }
+                })
+        }
+    }
+
     return (
         <div className="manage-orders">
             <h3 className="heading text-center my-5">Hi, Admin!! You can manage all orders</h3>
@@ -76,6 +94,7 @@ const ManageAllOrders = () => {
                                         </select>
                                         <br />
                                         <Button onClick={() => updateOrderStatus(manageUser._id)} className="mt-2 service-btn">Update</Button>
+                                        <Button onClick={() => deleteOrder(manageUser._id)} className="mt-2 ms-2 service-btn">Delete</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
