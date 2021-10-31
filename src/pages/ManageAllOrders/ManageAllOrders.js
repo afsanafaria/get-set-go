@@ -94,7 +94,7 @@ const ManageAllOrders = () => {
                                         </select>
                                         <br />
                                         <Button onClick={() => updateOrderStatus(manageUser._id)} className="mt-2 service-btn">Update</Button>
-                                        <Button onClick={() => deleteOrder(manageUser._id)} className="mt-2 ms-2 service-btn">Delete</Button>
+                                        <Button onClick={() => deleteOrder(manageUser._id)} className="mt-2 ms-lg-2 service-btn">Delete</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>

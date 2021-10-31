@@ -6,13 +6,13 @@ const Banner = () => {
     return (
         <div className="banner ">
             <Container >
-                <Row className="w-100">
+                <Row className="w-100 g-2">
                     <Col xs={12} md={4}
                         className="d-flex align-items-center justify-content-center"
                     >
-                        <div className=" ">
+                        <div className="home-section ">
                             {/* <h1 className="heading">Get Set Go</h1> */}
-                            <h1 className="home-heading text-md-wrap fw-bold">An Online delivery service</h1>
+                            <h1 className="home-heading text-md-wrap fw-bold">An Online Delivery Service</h1>
                             <p className="fs-5">We focus on our fastest delivery and quality of our service</p>
                         </div>
 
@@ -20,7 +20,7 @@ const Banner = () => {
                     </Col>
                     <Col md={8}>
                         <img
-                            className="w-100"
+                            className="w-100 h-100"
                             src="https://image.freepik.com/free-vector/delivery-service-vector-illustration_132971-179.jpg"
                             alt=""
                         />

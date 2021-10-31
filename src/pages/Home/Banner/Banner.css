@@ -10,3 +10,11 @@
     color: darkslateblue;
     font-size: 3rem;
 }
+
+
+@media only screen and (min-width:740px) and (max-width:990px){
+    .home-section{
+        margin: 0 50px !important;
+        word-wrap: break-word!important;
+    }
+}
