@@ -6,10 +6,10 @@
 
 Our System is about to deliver your products,accesories.It  all about an overview of the delivery businesses in your city. 
 
-### Why Us?
+### Important Info?
 
-  * We will provide fast service because ours have bike.
-  * If we are late for some reasons then you will get discount.
-  * We will provide best service also.
-  * We also have extra protection for glasses and food.
-  * You can have vouchar if you order within a month. 
+  * Developed with React and react-bootstrap and firebase implementation.
+  * Have used Private Route
+  * The user can manage the orders.
+  * The user can add more services as well.
+  * The user can add/delete his/her orders
